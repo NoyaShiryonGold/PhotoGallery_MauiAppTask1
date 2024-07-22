@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTask1.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/my_style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Image app"
+                   Style="{StaticResource Headline}"
+                   FontFamily="Pacifico"
+                   SemanticProperties.HeadingLevel="Level2" />
+            <Label Text="Click the arrow to change image"
+                   Style="{StaticResource SubHeadline}"
+                   FontFamily="EduAU"
+                   SemanticProperties.HeadingLevel="Level4" />
+            <Button x:Name="PreBtn"
+                    Text="&#xf182;"
+                    Style="{StaticResource Key=IconButton}"
+                    SemanticProperties.Hint="previous image"
+                    Clicked="OnArrowClicked" />
+            <Border Stroke="CadetBlue"
+                    StrokeThickness="10"
+                    StrokeShape="RoundRectangle 120"
+                    HorizontalOptions="Center">
+                <Image
+                    x:Name="ImageHolder"
+                    Source="logo.jpg"
+                    HeightRequest="250"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="image view" />
+            </Border>
+            <Button x:Name="NextBtn"
+                    Text="&#xf181;"
+                    Style="{StaticResource Key=IconButton}"
+                    SemanticProperties.Hint="Next image"
+                    Clicked="OnArrowClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
