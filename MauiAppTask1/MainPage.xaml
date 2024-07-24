@@ -39,10 +39,18 @@
                     SemanticProperties.Description="image view" />
             </Border>
             <Button x:Name="NextBtn"
-                    Text="&#xf181;"
+                    Text="Next "
+                    WidthRequest="100"
+                    FontFamily="Pacifico"
+                    FontSize="16"
                     Style="{StaticResource Key=IconButton}"
                     SemanticProperties.Hint="Next image"
-                    Clicked="OnArrowClicked"/>
+                    Clicked="OnArrowClicked">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="SymbolsOutlined"
+                                     Glyph="&#xf181;" Color="LightBlue"/>
+                </Button.ImageSource>
+            </Button>
         </VerticalStackLayout>
     </ScrollView>
 
