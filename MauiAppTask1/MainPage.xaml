@@ -10,39 +10,9 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ScrollView>
-        <VerticalStackLayout 
-            Padding="30,0"
-            Spacing="25">
-            <Label Text="Image app"
-                   Style="{StaticResource Headline}"
-                   FontFamily="Pacifico"
-                   SemanticProperties.HeadingLevel="Level2" />
-            <Label Text="Click the arrow to change image"
-                   Style="{StaticResource SubHeadline}"
-                   FontFamily="EduAU"
-                   SemanticProperties.HeadingLevel="Level4" />
-            <Button x:Name="PreBtn"
-                    Text="&#xf182;"
-                    Style="{StaticResource Key=IconButton}"
-                    SemanticProperties.Hint="previous image"
-                    Clicked="OnArrowClicked" />
-            <Border Stroke="CadetBlue"
-                    StrokeThickness="10"
-                    StrokeShape="RoundRectangle 120"
-                    HorizontalOptions="Center">
-                <Image
-                    x:Name="ImageHolder"
-                    Source="logo.jpg"
-                    HeightRequest="250"
-                    Aspect="AspectFit"
-                    SemanticProperties.Description="image view" />
-            </Border>
-            <Button x:Name="NextBtn"
-                    Text="&#xf181;"
-                    Style="{StaticResource Key=IconButton}"
-                    SemanticProperties.Hint="Next image"
-                    Clicked="OnArrowClicked"/>
-        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="MainLayout"
+                             Padding="30,0"
+                             Spacing="25" />
     </ScrollView>
 
 </ContentPage>
